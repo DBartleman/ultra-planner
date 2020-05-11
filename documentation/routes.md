@@ -9,11 +9,13 @@
 
 # Back-End 
 
-## Homepage
+## Tasks
 
-* GET / - returns list of all tasks for current user
-* Get /?=query - returns tasks matching a query string
-* POST / - creates a new task linked to current user
+* GET /tasks - returns list of all tasks for current user
+* Get /tasks?=query - returns tasks matching a query string
+* POST /tasks - creates a new task linked to current user
+* GET /tasks/:id - returns given task by ID (user clicks on task on front end)
+* DELETE /tasks - deletes a task
 
 ## Users
 
@@ -21,7 +23,3 @@
 * GET /users/:id - returns a user by ID
 * DELETE /users/:id - deletes a user by ID
 * POST /users/token - gets JWT token for user
-
-## Tasks
-
-* GET /task/:id - returns given task by ID (user clicks on task on front end)
