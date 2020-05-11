@@ -1,8 +1,8 @@
 ## MVP Features
 
 * Login/authentication
-* Tasks
-* Lists
+* Tasks (creation, deletion, editing)
+* Lists (creation, deletion, editing)
 * List summary 
 * Search
 
