@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -26,7 +26,12 @@
 
 .App-link {
   color: #61dafb;
-}
+} */
+
+/*
+  TODO: find out why the boxes move around horizontally depending on how much text 
+  is in them, regardless of setting width
+*/
 
 #navbar {
 	width: 100%;
@@ -49,6 +54,83 @@
   text-decoration: none;
   font-weight: bold;
   color: #2687bb;
+}
+
+.list-header {
+  margin: 0;
+  padding: 0px;
+  width: 300px;
+  font-size: 20px;
+}
+
+.list-header > li {
+  width: 100%;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: lightblue;
+  list-style: none;
+}
+
+.list-header > li:last-child {
+  border-bottom-left-radius: 10px;
+}
+
+.list-header > li:hover {
+  background-color: blue;
+  font-weight: bold;
+  color: white;
+}
+
+.list-header > li.active {
+  color: white;
+  background-color: blue;
+}
+
+.lists {
+  width: 700px;
+  padding: 25px;
+  /* note: temporary */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.list-tasks {
+  font-weight: bold;
+  color: black;
+  padding: 10px;
+  margin: 0 20px;
+  border: 2px solid black;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: flex-end;
+  background-color: lightblue;
+} 
+
+.task-title {
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+
+.task-description {
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 700px) {
+.lists {
+  width: 100%;
+  /* note: temporary */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 }
 
 @keyframes App-logo-spin {
