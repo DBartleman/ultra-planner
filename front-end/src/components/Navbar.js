@@ -1,5 +1,7 @@
 import React from 'react';
 
+//TODO: programmatically render the logged in and logged out stuff here, NOT in CSS
+
 class Navbar extends React.Component{
   render() {
     return (
