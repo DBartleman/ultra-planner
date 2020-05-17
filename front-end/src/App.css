@@ -93,7 +93,8 @@
 }
 
 .lists {
-  width: 700px;
+  /* width: 700px; */
+  max-width: 1000px;
   padding: 25px;
   /* note: temporary */
   display: flex;
@@ -122,8 +123,21 @@
 }
 
 .task-description {
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+.bottom-crud-buttons {
   padding-bottom: 15px;
   font-size: 14px;
+}
+
+.deleteTaskButton {
+  float: right;
+}
+
+.addTaskButton {
+  width: 100px;
 }
 
 @media screen and (max-width: 700px) {

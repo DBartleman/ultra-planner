@@ -61,11 +61,19 @@ class TaskNavigator extends React.Component {
                 <div>
                   <div className='task-title'>{task.title}</div>
                   <div className='task-description'>{task.description}</div>
+                  <div className='bottom-crud-buttons'>
+                    <input type="checkbox" id="taskCheck" name={task.title}></input>
+                    <label for="taskCheck">Completed</label>
+                    {/*  onClick={delete tweet} */}
+                    <button className="deleteTaskButton">Delete</button>
+                  </div>
+                  
                   {/* <div>{task.gif}</div> */}
                   <br />
                 </div>
-              )    
+              ) 
             }
+            <button className="addTaskButton">Add new task</button>
           </div>
         </div>
       </div>
