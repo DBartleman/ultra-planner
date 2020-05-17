@@ -2,12 +2,12 @@
 module.exports = (sequelize, DataTypes) => {
   const Task = sequelize.define('Task', {
     list_id: {
-      type: Sequelize.DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     name: { type: DataTypes.STRING(32), allowNull: false },
     body: { type: DataTypes.STRING(400), allowNull: false },
-    gif_url: { type: DataTypes.STRING(150), allowNull: false },
+    gif_url: { type: DataTypes.STRING(150) },
     completed: DataTypes.BOOLEAN
   }, {});
   Task.associate = function(models) {

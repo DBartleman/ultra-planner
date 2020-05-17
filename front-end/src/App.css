@@ -37,8 +37,9 @@
 	width: 100%;
 	float: left;
 	margin: 0;
-	padding: 0;
+	padding: 5px 0;
   list-style: none;
+  background-color: #aae4ee;
 }
 .navbar-left {
   float: left; 
@@ -65,7 +66,10 @@
 
 .list-header > li {
   width: 100%;
-  border: 2px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
   padding: 10px;
   text-align: center;
   cursor: pointer;
