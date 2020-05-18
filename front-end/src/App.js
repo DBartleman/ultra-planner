@@ -31,7 +31,6 @@ const lists = [
 
     ]
   },
-
 ];
 
 // function App() {
