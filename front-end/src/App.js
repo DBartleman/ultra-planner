@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Switch, NavLink } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import TaskNavigator from './components/TaskNavigator';
 import appContext from './appContext'
+import { ProtectedRoute, AuthRoute } from './Routes';
+import RegistrationForm from './components/RegistrationForm';
+import LoginForm from './components/LoginForm';
 
 // TODO: get folders from signed in user
 // demo data:
@@ -30,19 +34,34 @@ const lists = [
 
 ];
 
-function App() {
-  const [ authToken, setAuthToken ] = useState(null);
-  //const [ lists, setLists ] = useState([]); 
+// function App() {
+//   const [ authToken, setAuthToken ] = useState(null);
+//   //const [ lists, setLists ] = useState([]); 
 
-  const value = {
-    authToken, setAuthToken
-  };
+//   const value = {
+//     authToken, setAuthToken
+//   };
+//   return (
+//     <appContext.Provider value={value}>
+//       <Navbar />
+//       <TaskNavigator lists={lists}/>
+//     </appContext.Provider>
+//   );
+// }
+
+const App = ({ currentUserId }) => {
   return (
-    <appContext.Provider value={value}>
+    <div>
       <Navbar />
-      <TaskNavigator lists={lists}/>
-    </appContext.Provider>
+
+      <Switch>
+        <AuthRoute path="/register" component={RegistrationForm} currentUserId={currentUserId} />
+        <AuthRoute path="/login" component={LoginForm} currentUserId={currentUserId} />
+        {/* <ProtectedRoute path="/users/:userId" component={Profile} currentUserId={currentUserId} /> */}
+        <ProtectedRoute exact path="/" component={TaskNavigator} currentUserId={currentUserId} />
+      </Switch>
+    </div>
   );
-}
+};
 
 export default App;
