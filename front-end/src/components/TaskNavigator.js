@@ -64,7 +64,7 @@ class TaskNavigator extends React.Component {
                   <div className='bottom-crud-buttons'>
                     <input type="checkbox" id="taskCheck" name={task.title}></input>
                     <label for="taskCheck">Completed</label>
-                    {/*  onClick={delete tweet} */}
+                    {/*  onClick={delete task} */}
                     <button className="deleteTaskButton">Delete</button>
                   </div>
                   

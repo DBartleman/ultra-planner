@@ -1,11 +1,9 @@
-//TODO: evaluate if this is correct
-
-const express = require('express');
-
+const express = require("express");
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.render('index', { title: 'Home' });
+router.get("/", (req, res) => {
+    res.send("index root");
+    // no render?
 });
 
 module.exports = router;
